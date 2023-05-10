@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ứng dụng máy tính</title>
+</head>
+<body>
+<table>
+    <th>Caculator</th>
+    <tr>
+        <td><input type="number" id="sodau"></td>
+        <td><input type="number"id="sosau"></td>
+    </tr>
+</table>
+<table>
+    <tr style >
+        <td> <button type="button" onclick="nhapvao1()"> addition +</button> </td>
+        <td> <button type="button" onclick="nhapvao2()"> subtraction -</button> </td>
+        <td> <button type="button" onclick="nhapvao3()"> multiplication (X)</button> </td>
+        <td> <button type="button" onclick="nhapvao4()"> divison (/)</button> </td>
+    </tr>
+</table>
+<script>
+function nhapvao1() {
+    let A = +document.getElementById('sodau').value
+    let B = +document.getElementById('sosau').value
+    let dapan = A + B
+    document.write('result:' + dapan)
+}
+function nhapvao2() {
+    let A = document.getElementById('sodau').value
+    let B = document.getElementById('sosau').value
+    let dapan = A - B
+    document.write('result:' + dapan)
+}
+function nhapvao3() {
+    let A = document.getElementById('sodau').value
+    let B = document.getElementById('sosau').value
+    let dapan = A * B
+    document.write('result:' + dapan)
+}
+function nhapvao4() {
+    let A = document.getElementById('sodau').value
+    let B = document.getElementById('sosau').value
+    let dapan = A / B
+    document.write('result:' + dapan)
+}
+</script>
+
+</body>
+</html>

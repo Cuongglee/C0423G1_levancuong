@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển đổi tiền tệ</title>
+</head>
+<body>
+<table cellspacing="10px" style="width: 50%">
+    <tr align="center">
+        <td>Amount</td>
+        <td>From currency</td>
+        <td>To currency</td>
+    </tr>
+    <tr>
+        <td ><input type="number" name="tien" id="nhap"></td>
+        <td><select  id="from">
+            <option value="VND">Vietnam</option>
+            <option value="USD"> USD</option>
+        </select></td>
+        <td><select id="to">
+            <option value="USD">USD</option>
+            <option value="VND"> Vietnam</option>
+        </select></td>
+        <td> <button type="button" onclick="vuive()"> convert</button> </td>
+    </tr>
+</table>
+<br>
+<script>
+    function vuive()  {
+       let A = document.getElementById('nhap').value
+        let B = document.getElementById('from').value
+        let C = document.getElementById('to').value
+        if (B == "VND" && C == "USD"){
+            let dong = A * 23000
+            document.write('tien là:' + dong)
+        }
+        else{
+            let dola = A / 23000
+            document.write('tien là:' + dola)
+        }
+
+        }
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
