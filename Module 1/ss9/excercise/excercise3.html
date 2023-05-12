@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+</head>
+   <style>
+       .trai {
+           width: -webkit-fill-available;
+       }
+   </style>
+<body>
+<table>
+    <th><input type="text" style="width: 100px" id="view"></th>
+</table>
+<table>
+    <tr>
+    <td><button type="button" value="1" onclick="inputvalue(this.value)" class="trai">1</button> </td>
+    <td><button type="button" value="2" onclick="inputvalue(this.value)" class="trai">2</button> </td>
+    <td><button type="button" value="3" onclick="inputvalue(this.value)" class="trai">3</button> </td>
+    <td><button type="button" value="+" onclick="inputvalue(this.value)" class="trai">+</button> </td>
+    </tr>
+    <tr>
+        <td><button type="button" value="4" onclick="inputvalue(this.value)" class="trai">4</button> </td>
+        <td><button type="button" value="5" onclick="inputvalue(this.value)" class="trai">5</button> </td>
+        <td><button type="button" value="6" onclick="inputvalue(this.value)" class="trai">6</button> </td>
+        <td><button type="button" value="-" onclick="inputvalue(this.value)" class="trai">-</button> </td>
+    </tr>
+    <tr>
+        <td><button type="button" value="7" onclick="inputvalue(this.value)" class="trai">7</button> </td>
+        <td><button type="button" value="8" onclick="inputvalue(this.value)" class="trai">8</button> </td>
+        <td><button type="button" value="9" onclick="inputvalue(this.value)" class="trai">9</button> </td>
+        <td><button type="button" value="*" onclick="inputvalue(this.value)" class="trai">x</button> </td>
+    </tr>
+    <tr>
+        <td><button type="button" onclick="del()" class="trai">C</button> </td>
+        <td><button type="button" value="0" onclick="inputvalue(this.value)" class="trai">0</button> </td>
+        <td><button type="button" onclick="result()" class="trai">=</button> </td>
+        <td><button type="button" value="/" onclick="inputvalue(this.value)" class="trai">/</button> </td>
+    </tr>
+</table>
+<script>
+    let view = document.getElementById("view")
+    function inputvalue(value) {
+    view.value += value;
+    }
+    function result() {
+    let result = eval(view.value)
+        view.value = result
+    }
+    function del() {
+        view.value ="";
+
+    }
+</script>
+</html>

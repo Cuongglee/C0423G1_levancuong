@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI</title>
+</head>
+<body>
+<table>
+    <th> Chỉ số cân nặng</th>
+    <tr>
+        <td>Nhập cân nặng:</td>
+        <td><input type="number"  id="N"></td>
+    </tr>
+    <tr>
+        <td>Nhập chiều cao:</td>
+        <td><input type="number"  id="C"></td>
+    </tr>
+    <tr><td><input type="button" onclick="vuive()" name="ok" value="kiểm tra"></td></tr>
+    <p id="result"></p>
+</table>
+<script>
+    function vuive() {
+        let A = document.getElementById('N').value;
+        let B = document.getElementById('C').value;
+        let bmi = A / (B^2);
+        let result = "";
+        if (bmi < 18.5) {
+           result = "gầy quá!"
+        } else if (bmi < 25.0) {
+            result = "Bình thường nhé!"
+        } else if (bmi < 30.0) {
+            result = "Hơi mập!"
+        } else {
+            result = "quá mập!"}
+            document.getElementById('result').innerHTML = ("chỉ số BMI của bạn là: " + bmi + "cơ thể bạn:" + result)
+    }
+
+</script>
+
+</body>
+</html>
