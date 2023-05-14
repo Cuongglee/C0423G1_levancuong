@@ -10,14 +10,14 @@
     // 10tr < TN <= 18tr	TN x 15% - 0.75tr
     // 18tr < TN <= 32tr	TN x 20% - 1.65tr
     let a = +prompt('lương tháng');
-    if (a<=10000000){
-        let x = a * 10/100 - 250000;
+    if (a <= 10000000) {
+        let x = a * 10 / 100 - 250000;
         alert('số tiền đóng thuế là:' + x);
-    }else if (a<=18000000){
-        let y = a * 15/100 -750000;
+    } else if (a <= 18000000) {
+        let y = a * 15 / 100 - 750000;
         alert('số tiền đóng thuế là:' + y);
-    }else{
-        let z = a * 20/100 - 1650000;
+    } else {
+        let z = a * 20 / 100 - 1650000;
         alert('số tiền đóng thuế là:' + z)
     }
 
