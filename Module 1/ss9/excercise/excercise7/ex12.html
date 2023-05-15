@@ -11,27 +11,26 @@
 <script>
     let a = +prompt('Nhập số tiền cần vay');
     let b = +prompt('nhập số tháng? 12 , 120 hay 240 tháng?');
-    tiengocphaitra = a / b;
+    tienGocPhaiTra = a / b;
     switch (b) {
         case 12:
-            laithangdau = (a * 13 / 100) / 12;
-            laicacthangsau = ((a - tiengocphaitra) * 13 / 100) / 12;
-            alert('số tiền lãi tháng đầu là:' + laithangdau + ' số tiền lãi các tháng sau là:' + laicacthangsau);
-            break
+            laiThangDau = (a * 13 / 100) / 12;
+            laiCacThangSau = ((a - tienGocPhaiTra) * 13 / 100) / 12;
+            alert('số tiền lãi tháng đầu là:' + laiThangDau + ' số tiền lãi các tháng sau là:' + laiCacThangSau);
+            break;
         case 120:
-            laithangdau = (a * 11 / 100) / 12;
-            laicacthangsau = ((a - tiengocphaitra) * 11 / 100) / 12;
-            alert('số tiền lãi tháng đầu là:' + laithangdau + ' số tiền lãi các tháng sau là:' + laicacthangsau);
-            break
+            laiThangDau = (a * 11 / 100) / 12;
+            laiCacThangSau = ((a - tienGocPhaiTra) * 11 / 100) / 12;
+            alert('số tiền lãi tháng đầu là:' + laiThangDau + ' số tiền lãi các tháng sau là:' + laiCacThangSau);
+            break;
         case 240:
-            laithangdau = (a * 9 / 100) / 12;
-            laicacthangsau = ((a - tiengocphaitra) * 9 / 100) / 12;
-            alert('số tiền lãi tháng đầu là:' + laithangdau + ' số tiền lãi các tháng sau là:' + laicacthangsau);
-            break
+            laiThangDau = (a * 9 / 100) / 12;
+            laiCacThangSau = ((a - tienGocPhaiTra) * 9 / 100) / 12;
+            alert('số tiền lãi tháng đầu là:' + laiThangDau + ' số tiền lãi các tháng sau là:' + laiCacThangSau);
+            break;
         default:
             alert('số tháng bạn nhập không đúng quy định')
     }
-
 </script>
 
 </body>
