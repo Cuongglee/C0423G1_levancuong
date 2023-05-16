@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lãi suất</title>
+</head>
+<body>
+<script>
+    do{
+        let a = +prompt('Nhập số tiền cần vay');
+        let b = +prompt('nhập số tháng? 12 , 120 hay 240 tháng?');
+        tienGocPhaiTra = a / b;
+        switch (b) {
+            case 12:
+                laiThangDau = (a * 13 / 100) / 12;
+                laiCacThangSau = ((a - tienGocPhaiTra) * 13 / 100) / 12;
+                alert('số tiền lãi tháng đầu là:' + laiThangDau + ' số tiền lãi các tháng sau là:' + laiCacThangSau);
+                break;
+            case 120:
+                laiThangDau = (a * 11 / 100) / 12;
+                laiCacThangSau = ((a - tienGocPhaiTra) * 11 / 100) / 12;
+                alert('số tiền lãi tháng đầu là:' + laiThangDau + ' số tiền lãi các tháng sau là:' + laiCacThangSau);
+                break;
+            case 240:
+                laiThangDau = (a * 9 / 100) / 12;
+                laiCacThangSau = ((a - tienGocPhaiTra) * 9 / 100) / 12;
+                alert('số tiền lãi tháng đầu là:' + laiThangDau + ' số tiền lãi các tháng sau là:' + laiCacThangSau);
+                break;
+            default:
+                alert('số tháng bạn nhập không đúng quy định')
+        }
+    }while (true);
+</script>
+</body>
+</html>

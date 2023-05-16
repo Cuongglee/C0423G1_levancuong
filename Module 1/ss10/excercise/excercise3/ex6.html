@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chia hết cho 7</title>
+</head>
+<body>
+<script>
+    let count = 0, tong = 0;
+    let daySo = "";
+    for (let i = 1; ; i++) {
+        if (i % 7 == 0) {
+            daySo += i + "";
+            tong += i;
+            count++;
+            if (count == 30) {
+                break;
+            }
+        }
+    }
+    document.writeln('tổng bằng:' + tong);
+</script>
+</body>
+</html>

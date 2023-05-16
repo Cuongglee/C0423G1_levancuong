@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game</title>
+</head>
+<body>
+<button onclick="startGame()" id="Game">Chơi nào</button>
+<script>
+    function startGame() {
+        alert("game đoán số!");
+        let diemDau = +prompt("chọn khoảng muốn đoán\n Từ: ");
+        let diemCuoi = +prompt("Đến: ");
+        alert("Bạn sẽ đoán trong khoảng từ " + diemDau + " đến " + diemCuoi);
+        let randomNumber = Math.round(Math.random() * (diemCuoi - diemDau) + diemDau);
+
+        for (let i = 0; i < 3; i++) {
+            let number = +prompt("Mời bạn đoán lần thứ " + (i + 1));
+            if (number === randomNumber) {
+                alert("You win!");
+                break;
+            } else if (number < randomNumber) {
+                alert("Số bạn đoán bé hơn");
+            } else if (number > randomNumber) {
+                alert("Số bạn đoán lớn hơn");
+            } else {
+                alert("Bạn đã đoán sai, vui lòng đoán lại.");
+            }
+            if(i === 2) {
+                document.getElementById("Game").innerText = "Chơi lại";
+            }
+        }
+    }
+</script>
+</body>
+</html>
