@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>giá trị trung bình</title>
+</head>
+<body>
+<script>
+    let so = [1, 26, 34, 4, 5, 6, 37, 8, 9, 10];
+    let max = so[0];
+    let index = 0;
+    let b = 0;
+    let c = so.length;
+    for (let i = 0; i < so.length; i++) {
+        b = b + so[i];
+        if (so[i] < max) {
+            max;
+        } else {
+            max = so[i];
+            index = i + 1;
+        }
+    }
+    let d = b / c;
+    document.write('trung bình của mảng là :' + d);
+</script>
+</body>
+</html>

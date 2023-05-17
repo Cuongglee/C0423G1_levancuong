@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>số nguyên âm</title>
+</head>
+<body>
+<script>
+    let so = [-1, -2, 3, 6, -7, 0, 8, -9, 10, 20];
+    let count = 0;
+    for (i = 0; i < so.length; i++) {
+        if (so[i] < 0) {
+            count++;
+        }
+    }
+    document.write('số lượng số âm trong mảng là: ' + count);
+</script>
+</body>
+</html>

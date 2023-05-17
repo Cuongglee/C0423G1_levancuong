@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>từ điển</title>
+</head>
+<body>
+<input type="text" placeholder="nhập từ" id="nhapvao">
+<button type="button" onclick="vuive()" value="ok" name="từ điển">Dịch</button>
+<div id="hihi"></div>
+<script>
+    function vuive() {
+        let nhap = document.getElementById('nhapvao').value;
+        let tiengAnh = ['beautiful', 'cute', 'fat'];
+        let tiengViet = ['đẹp', 'dễ thương', 'mập'];
+        let flag = false;
+        for (i = 0; i < tiengAnh.length; i++) {
+            if (nhap === tiengAnh[i]) {
+                flag = true;
+                document.getElementById('hihi').innerHTML = tiengViet[i];
+            }
+        }
+        if (flag === false) {
+            alert('không tìm thấy');
+        }
+    }
+</script>
+</body>
+</html>
