@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đếm số trong 1 chuỗi</title>
+</head>
+<body>
+<script>
+    let a = prompt('nhập kí tự vào nhé:');
+    let result = [];
+    let count = 0;
+    for (let i = 0; i < a; i++) {
+        result[i] = prompt('nhập giá trị tiếp theo:' + (i + 1));
+        if (result[i] % 1 !== 0) {
+            count++;
+        }
+    }
+    document.write(count);
+</script>
+</body>
+</html>

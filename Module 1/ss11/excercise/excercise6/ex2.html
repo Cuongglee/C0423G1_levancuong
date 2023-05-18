@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>đảo ngược</title>
+    <title>đổi số</title>
 </head>
 <body>
-
+<script>
+    let a = ['r', 'b', 't', '26', '63', '19'];
+    let soDau = 0;
+    let soCuoi = a.length - 1;
+    while (soDau < soCuoi) {
+        let result = a[soDau];
+        a[soDau] = a[soCuoi];
+        a[soCuoi] = result;
+        soDau++;
+        soCuoi--;
+    }
+    document.write(a);
+</script>
 </body>
 </html>
