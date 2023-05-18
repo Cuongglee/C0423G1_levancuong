@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [
+        [5, 7, 9, 30, 34],
+        [8, 11, 4, 4, 6, 9],
+        [7, 9, 7, 27],
+        [7, 4, 28, 25, 45],
+        [3, 10, 50, 7]
+    ];
+    for (let i in a) {
+        document.writeln('hàng:' + i + `<br/>`);
+        for (j in a[i]) {
+            document.writeln(a[i][j] + `<br/>`);
+        }
+    }
+</script>
+</body>
+</html>
