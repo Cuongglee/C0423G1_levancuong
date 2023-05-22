@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function starCheck(sao) {
+        let a = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let b = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+        let flag = false;
+        for (let i = 0; i < b.length; i++) {
+            if (b[i] === sao) {
+                flag = true
+                document.writeln('chòm sao tương ứng với ngôi sao:' + a[i] + 'là' + b[i]);
+                break;
+            } else if (b[i] === sao) {
+                document.write('bạn đang nhập là chòm sao mời bạn nhập lại ngôi sao');
+                return;
+                break;
+            }
+        }
+        if (flag === false) {
+            document.write('không tìm thấy nội dung, mời bạn nhập lại');
+        }
+
+    }
+    let sao = prompt('nhập vào tên ngôi sao');
+    starCheck(sao);
+</script>
+</body>
+</html>

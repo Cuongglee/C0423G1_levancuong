@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function numberCheck(number) {
+        if (a % 1 !== 0) {
+            document.write('Bạn nhập không phải là số nguyên, nhập lại nhé! ');
+        } else if (a > 0) {
+            document.write('số bạn nhập là số nguyên dương');
+        } else if (a < 0) {
+            document.write('số bạn nhập là số nguyên âm');
+        } else {
+            document.write('số này không phải là số nguyên âm và nguyên dương ');
+        }
+    }
+
+    let a = prompt('Nhập một số bất kì:');
+    numberCheck(a);
+</script>
+</body>
+</html>

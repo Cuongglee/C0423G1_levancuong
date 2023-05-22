@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tham số</title>
+</head>
+<body>
+<script>
+    function numberCheck(a, b) {
+        if (a > b) {
+            return -1;
+        } else {
+            return a + b;
+        }
+    }
+
+    let num1 = +prompt('nhập vào số thứ nhất');
+    let num2 = +prompt('nhập vào số thứ hai');
+    let sum = numberCheck(num1, num2);
+    if (sum === -1) {
+        alert('vì số thứ nhất lớn hơn số thứ hai nên hai số làlà :' + num1 + 'và' + num2);
+    } else {
+        alert('vì số thứ nhất bé hơn số thứ hai nên tổng là:' + sum);
+    }
+</script>
+</body>
+</html>

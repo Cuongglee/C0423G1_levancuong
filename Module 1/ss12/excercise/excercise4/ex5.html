@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>số nguyên</title>
+</head>
+<body>
+<script>
+    function integer(number) {
+        let a = number.split('');
+        let min = a[0]
+        for (let i = 1; i < a.length; i++) {
+            if (min > a[i]) {
+                min = a[i]
+            } else {
+                min[i]
+            }
+        }return min;
+    }
+
+    let a = prompt('nhập vào 3 số bất kì');
+    let b = integer(a);
+    document.writeln('số nhỏ nhất là:' + b);
+</script>
+</body>
+</html>
