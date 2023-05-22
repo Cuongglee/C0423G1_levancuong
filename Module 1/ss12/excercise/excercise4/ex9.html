@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt('Nhập dãy kí tự vào ');
+    let b = prompt('Nhập kí tự cần muốn kiểm tra');
+    let arr = a.split(''); // chuoi thanh mang
+    let c = 0;
+    let flag = false;
+
+    function array(string, number) {
+        for (let i = 0; i < string.length; i++) {
+            if (number === string[i]) {
+                c++;
+                flag = true;
+            }
+        }
+        if (flag === false) {
+            return '-1';
+        }
+        return ` kí tự ${number}  xuất hiện ${c} trong dãy bạn nhập `;
+    }
+
+    alert(array(arr, b));
+</script>
+
+</body>
+</html>
