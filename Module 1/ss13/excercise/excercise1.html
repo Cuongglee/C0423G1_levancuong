@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hình chữ nhật</title>
+</head>
+<body>
+<script>
+    class rectangle {
+        chieuDai;
+        chieuRong;
+
+        constructor(chieuDai, chieuRong) {
+            this.chieuDai = chieuDai;
+            this.chieuRong = chieuRong;
+        }
+
+        getChieuDai() {
+            return this.chieuDai;
+        }
+
+        getChieuRong() {
+            return this.chieuRong;
+        }
+
+        setChieuDai(chieuDai) {
+            this.chieuDai = chieuDai;
+        }
+
+        setChieuRong(chieuRong) {
+            this.chieuRong = chieuRong;
+        }
+
+        getDienTich() {
+            return this.chieuDai * this.chieuRong;
+        }
+
+        getChuVi() {
+            return (this.chieuDai + this.chieuRong) * 2
+        }
+    }
+
+    let a = +prompt('nhập chiều dài vào');
+    let b = +prompt('nhập chiều rộng vào');
+    let rectangle1 = new rectangle(a, b);
+    let dienTich = rectangle1.getDienTich();
+    let chuVi = rectangle1.getChuVi();
+    document.write('diện tích hình chữ nhât là :' + dienTich + `<br>`);
+    document.write('chu vi hình chữ nhật là :' + chuVi);
+</script>
+</body>
+</html>
