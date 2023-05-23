@@ -6,19 +6,19 @@
 </head>
 <body>
 <script>
-    function circleArea(r) {
-        let circleArea = r * r * 3.14;
-        return circleArea;
+    function areaCircle(r) {
+        let areaCircle = r * r * 3.14;
+        return areaCircle;
     }
 
-    function circleDiameter(r) {
-        let circleDiameter = 2 * r * 3.14;
-        return circleDiameter;
+    function diameterCircle(r) {
+        let diameterCircle = 2 * r * 3.14;
+        return diameterCircle;
     }
 
     let a = +prompt('nhập r vào:');
-    let b = circleArea(a);
-    let c = circleDiameter(a);
+    let b = areaCircle(a);
+    let c = diameterCircle(a);
     document.writeln('diện tích hình tròn là:' + b + `<br>` +  'chu vi hình tròn là:' + c);
 </script>
 

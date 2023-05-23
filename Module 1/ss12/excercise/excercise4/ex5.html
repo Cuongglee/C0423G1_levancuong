@@ -6,7 +6,7 @@
 </head>
 <body>
 <script>
-    function numberCheck(number) {
+    function checkNumber(number) {
         let a = number.split('');
         let min = a[0]
         for (let i = 1; i < a.length; i++) {
@@ -20,7 +20,7 @@
     }
 
     let a = prompt('nhập vào 3 số bất kì');
-    let b = numberCheck(a);
+    let b = checkNumber(a);
     document.writeln('số nhỏ nhất là:' + b);
 </script>
 </body>

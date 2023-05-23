@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <script>
-    function arrayReverse(number) {
+    function reverseArray(number) {
         let a = number.split('');
         let b = a[0];
         a[0] = a[1];
@@ -14,7 +14,7 @@
     }
 
     let a = prompt('nhập số vào đây');
-    let b = arrayReverse(a);
+    let b = reverseArray(a);
     document.write('số đã được thay đổi thành:' +  b.join(' '));
 </script>
 <body>
