@@ -2,21 +2,102 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>điện thoại</title>
+    <title>điện thoại thông minh</title>
 </head>
 <body>
+<table border="1" style="background: darkgray">
+    <tr>
+        <th>Nguyên</th>
+        <th>Hải</th>
+    </tr>
+    <tr>
+        <td><textarea id="123"></textarea></td>
+        <td><textarea id="500"></textarea></td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="samsungOfHai.texting()"> Soạn tin nhắn</button>
+        </td>
+        <td>
+            <button onclick="iphoneOfNguyen.texting()"> Soạn tin nhắn</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="samsungOfHai.seenMessage()">Xem tin nhắn</button>
+        </td>
+        <td>
+            <button onclick="iphoneOfNguyen.seenMessage()">Xem tin nhắn</button>
+        </td>
+    </tr>
+</table>
 <script>
-    class mobile {
-        battery;
-        composingMessage;
-        inboxMessage;
-        sentMessage;
-        onPhone
-        offPhone
-        constructor() {
+    class Mobile {
+        constructor(phoneNumber) {
+            this.pin = 100;
+            this.messageInProgress;
+            this.inbox = [];
+            this.mailboxSent = [];
+            this.status = true;
+            this.phoneNumber = phoneNumber;
+        }
 
+        turnOnThePhone() {
+            alert("Đã bật!");
+            this.status = true;
+        }
+
+        turnOffThePhone() {
+            alert("Đã tắt!");
+            this.status = false;
+        }
+
+        battery() {
+            this.pin = 100;
+            alert("Pin đầy!");
+        }
+
+        texting() {
+            this.messageInProgress = prompt("Mời bạn nhập tin nhắn: ");
+            let sentConfirm = confirm("Bạn có muốn gửi cho ai không?");
+            if (sentConfirm) {
+                let phoneNumberReceive = +prompt("hãy nhập số điện thoại người nhận");
+                this.sentMessage(this.messageInProgress, phoneNumberReceive);
+            }
+        }
+
+        sentMessage(message, phoneNumberReceive) {
+            let locationOfPhoneNumber = khoLuuphoneNumber.indexOf(phoneNumberReceive);
+            if (locationOfPhoneNumber !== -1) {
+                alert("Sẽ gửi cho số " + phoneNumberReceive);
+                let phoneToReceive = phoneNumberStorage[locationOfPhoneNumber];
+                phoneToReceive.receiveMessage(message + " từ số " + this.phoneNumber);
+            } else {
+                alert("Không tìm thấy số điện thoại này.");
+            }
+        }
+
+        receiveMessage(message) {
+            this.inbox.push(message);
+        }
+
+        seenMessage() {
+            let allMessage = "";
+            for (let i = 0; i < this.inbox.length; i++) {
+                allMessage += this.inbox[i] + "\n";
+            }
+            let idScreen = "" + this.phoneNumber;
+            document.getElementById(idScreen).value = allMessage;
         }
     }
+
+    let khoLuuphoneNumber = [];
+    let phoneNumberStorage = [];
+
+    let samsungOfHai = new Mobile(123);
+    let iphoneOfNguyen = new Mobile(500);
+    phoneNumberStorage.push(samsungOfHai, iphoneOfNguyen);
+    khoLuuphoneNumber.push(samsungOfHai.phoneNumber, iphoneOfNguyen.phoneNumber);
 </script>
 </body>
 </html>

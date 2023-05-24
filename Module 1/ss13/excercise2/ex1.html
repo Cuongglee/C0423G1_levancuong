@@ -2,37 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>siêu nhân gao</title>
 </head>
 <body>
 <div id="game"></div>
 <script>
 
-    function Hero(image, top, left, size){
+    function Hero(image, top, left, size) {
         this.image = image;
         this.top = top;
         this.left = left;
         this.size = size;
 
-        this.getHeroElement = function(){
-            return '<img width="'+ this.size + '"' +
-                ' height="'+ this.size + '"' +
-                ' src="' + this.image +'"' +
-                ' style="top: '+this.top+'px; left:'+this.left+'px;position:absolute;" />';
+        this.getHeroElement = function () {
+            return '<img width="' + this.size + '"' +
+                ' height="' + this.size + '"' +
+                ' src="' + this.image + '"' +
+                ' style="top: ' + this.top + 'px; left:' + this.left + 'px;position:absolute;" />';
         }
 
-        this.moveRight = function(){
+        this.moveRight = function () {
             this.left += 20;
             console.log('ok: ' + this.left);
         }
-        this.moveLeft = function(){
+        this.moveLeft = function () {
             this.left -= 20;
             console.log('ok: ' + this.left);
         }
     }
 
     var hero = new Hero('https://thuthuatnhanh.com/wp-content/uploads/2022/06/Anh-sieu-nhan-mau-do.jpg', 20, 30, 200);
-    let flag = true; // can move right
+    let flag = true;
+
     function start() {
         if (hero.left < window.innerWidth - hero.size && flag) {
             hero.moveRight();
@@ -41,7 +42,7 @@
             moveLeft();
         }
         document.getElementById('game').innerHTML = hero.getHeroElement();
-        setTimeout(start, 50)
+        setTimeout(start, 0);
     }
 
     function moveLeft() {
