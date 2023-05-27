@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Frefix sum</title>
+</head>
+<body>
+<script>
+    let a = [1, 2, 3, 4, 5, 6, 7, 8];
+    let b = [];
+    let sum = 0;
+    for (let i = 0; i < a.length; i++) {
+        sum = sum + a[i];
+        b.push(sum);
+    }
+    alert('mảng chứa prefix sums của mảng a là' + b);
+</script>
+</body>
+</html>
