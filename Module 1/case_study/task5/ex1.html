@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task5</title>
+</head>
+<body>
+<script>
+    let a = +prompt('nhập số nguyên dương chiều dài của ma trận');
+    let b = +prompt('nhập số nguyên dương chiều rộng của ma trận');
+    let arr = [];
+    let sum = 0;
+    for (let i = 0; i < a; i++) {
+        arr[i] = [];
+        for (let j = 0; j < b; j++) {
+            arr[i][j] = +prompt(`nhập vào phần tử của ma trận vào`);
+            if (arr[i][j] % 2 === 0) {
+                sum += arr[i][j]
+            }
+        }
+    }
+    alert('tổng các số chẵn trong ma trận là ' + sum);
+</script>
+
+</body>
+</html>

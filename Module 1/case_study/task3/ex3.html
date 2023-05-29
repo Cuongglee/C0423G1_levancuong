@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numerators = [7, 9, 5];
+    let denominators = [8, 3, 2];
+    let max = numerators[0] / denominators[0];
+    let result = 0;
+    let number = 0;
+    for (let i = 0; i < numerators.length; i++) {
+        result = numerators[i] / denominators[i];
+        if (result > max) {
+            max = result;
+            number = i;
+        }
+    }
+    alert('phân số lớn nhất là' + numerators[number] + '/' + denominators[number] + 'có chỉ số là:' + number);
+</script>
+</body>
+</html>

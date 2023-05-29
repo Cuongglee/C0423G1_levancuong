@@ -9,7 +9,7 @@
     let luong = +prompt('nhập lương ròng vào đây');
     let thueThuNhap;
     let luongThucNhan;
-    if (luong === 15000000) {
+    if (luong >= 15000000) {
         thueThuNhap = (20 / 100) * luong;
     } else if (luong > 7000000 && luong < 15000000) {
         thueThuNhap = (10 / 100) * luong;

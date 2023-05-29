@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuỗi</title>
+</head>
+<body>
+<script>
+    let arr = prompt('nhập một chuỗi bất kì vào nè!');
+    arr = arr.trim();
+    let newArr = arr.toLowerCase().split('');
+    let array = [];
+
+    for (let i = 0; i < newArr.length; i++) {
+        if (newArr[i] % 1 !== 0 || newArr[i] === " ") {
+            newArr[0] = newArr[0].toUpperCase();
+            if (newArr[i] === " ") {
+                newArr[i + 1] = newArr[i + 1].toUpperCase();
+            }
+            array.push(newArr[i]);
+        }
+    }
+    array = array.join('');
+    array = array.split(' ');
+    let max = array[0];
+    for (let i = 0; i < array.length; i++) {
+        if (max.length < array[i].length) {
+            max = array[i];
+        }
+    }
+    document.write('chữ có đô dài lớn nhất là : ' + max);
+    document.write(`<br>`);
+    document.write(array.join(' '));
+</script>
+</body>
+</html>

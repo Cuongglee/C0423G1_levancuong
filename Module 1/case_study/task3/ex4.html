@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nước uống</title>
+</head>
+<body>
+<script>
+    let order = ['1.Cafe', '\n2.Cam vắt', '\n3.Nước ép cà rốt', '\n4.Nước ép cà chua', '\n5.Nước lọc', '\n6.Nước dừa', '\n7.thoát'];
+    alert(order);
+    let frice = [15, 20, 25, 25, 10, 30]; // giá
+    let quantity = 0; // số lượng muốn mua
+    let value = 0; // lựa chọn giá trị
+    do {
+        value = +prompt('nhập số từ 1-7 tương ứng với món bạn chọn nè:');
+        if (value === 7) {
+            alert('bạn đã thoát ứng dụng');
+        }
+    } while (value <= 0 || value > 7);
+    if (value < 7) {
+        do {
+            quantity = +prompt(order[value - 1] + 'có giá là:' + frice[value - 1] + 'ngàn đồng , bạn muốn mua bao nhiêu ly');
+        } while (isNaN(quantity));
+        alert(` tổng tiền của bạn là ${frice[value - 1] * quantity} nghìn đồng`);
+    }
+</script>
+</body>
+</html>

@@ -7,7 +7,7 @@
 <body>
 <script>
     let chuCai = prompt('nhập chữ cái bất kì vào');
-    switch (chuCai) {
+    switch (chuCai.toLowerCase()) {
         case 'o':
         case 'u':
         case 'i':
@@ -16,7 +16,7 @@
             alert(chuCai + ' là nguyên âm');
             break;
         default:
-            alert(chuCai + ' không phải là nguyên âm');
+            alert(chuCai + ' không phải là phụ âm');
             break;
     }
 </script>

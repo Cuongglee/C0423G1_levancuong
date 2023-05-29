@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a1 = "aabcc";
+    let a2 = "adcaa";
+    arr1 = a1.split(``);
+    arr2 = a2.split(``);
+    let newArr = [];
+    let count = 0;
+    let index1;
+    let index2;
+
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr1[i] === arr2[j]) {
+                newArr.push(a1[i]);
+                arr2.splice(j, 1);
+                break;
+            }
+        }
+    }
+    for (let i = 0; i < newArr.length; i++) {
+        if (newArr[i] === newArr[i + 1]) {
+            count++;
+            index1 = i;
+        } else {
+            newArr[i];
+            index2 = i;
+        }
+    }
+    document.write(`SoKiTuChung(a1, a2) = ${newArr.length} <br>`);
+    document.write(`Hai chuỗi kí tự có ${newArr.length} kí tự chung là ${count + 1} ${newArr[index1]} và  ${newArr[index2]}`);
+</script>
+</body>
+</html>
