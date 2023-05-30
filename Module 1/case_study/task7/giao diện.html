@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>HỆ THỐNG QUẢN LÍ ĐÀO TẠO MODULE 1</h1>
+<table>
+    <tr>
+        <td> <button type="button" name="ok" onclick="bai1()" >task 1</button></td>
+    </tr>
+    <tr>
+        <td> <button><a href="http://localhost:63342/Module%201/case_study/task1/ex2.html?_ijt=27oakkdcbhhd4v2ldbmb4ija5s" target="_blank">task 2</a></button></td>
+    </tr>
+    <tr>
+        <td> <button>task 3</button></td>
+    </tr>
+    <tr>
+        <td> <button>task 4</button></td>
+    </tr>
+    <tr>
+        <td> <button>task 5</button></td>
+    </tr>
+    <tr>
+        <td> <button>task 6</button></td>
+    </tr>
+    <tr>
+        <td> <button>task 7</button></td>
+    </tr>
+</table>
+<script>
+    function bai1() {
+        let luong = +prompt('nhập lương ròng vào đây');
+        let thueThuNhap;
+        let luongThucNhan;
+        if (luong >= 15000000) {
+            thueThuNhap = (20 / 100) * luong;
+        } else if (luong > 7000000 && luong < 15000000) {
+            thueThuNhap = (10 / 100) * luong;
+        } else {
+            thueThuNhap = (5 / 100) * luong;
+        }
+        luongThucNhan = luong - thueThuNhap;
+        document.write('lương thực nhận của bạn là:' + luongThucNhan);
+    }
+    function bai2() {
+        let chuCai = prompt('nhập chữ cái bất kì vào');
+        switch (chuCai.toLowerCase()) {
+            case 'o':
+            case 'u':
+            case 'i':
+            case 'a':
+            case 'e':
+                alert(chuCai + ' là nguyên âm');
+                break;
+            default:
+                alert(chuCai + ' không phải là phụ âm');
+                break;
+        }
+    }
+    function bai3() {
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 5; j++) {
+                if (j + i >= 4) {
+                    document.write('*');
+                } else {
+                    document.write('&nbsp&nbsp');
+                }
+            }
+            document.write(`<br/>`);
+        }
+    }
+</script>
+</body>
+</html>

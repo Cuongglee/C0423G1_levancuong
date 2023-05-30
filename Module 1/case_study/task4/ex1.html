@@ -6,31 +6,30 @@
 </head>
 <body>
 <script>
-    let arr = prompt('nhập một chuỗi bất kì vào nè!');
-    arr = arr.trim();
-    let newArr = arr.toLowerCase().split('');
-    let array = [];
-
-    for (let i = 0; i < newArr.length; i++) {
-        if (newArr[i] % 1 !== 0 || newArr[i] === " ") {
-            newArr[0] = newArr[0].toUpperCase();
-            if (newArr[i] === " ") {
-                newArr[i + 1] = newArr[i + 1].toUpperCase();
-            }
-            array.push(newArr[i]);
+    let arr1 = prompt('Nhập vào một chuỗi bất kì');
+    arr1 = arr1.split(' ');
+    let arr2 = [];
+    for (let i = 0; i < arr1.length; i++) {
+        if (arr1[i] !== '') {
+            arr2.push(arr1[i]);
         }
     }
-    array = array.join('');
-    array = array.split(' ');
-    let max = array[0];
-    for (let i = 0; i < array.length; i++) {
-        if (max.length < array[i].length) {
-            max = array[i];
+    let tray = '';
+    let max = 0;
+    let maxLength = [];
+    for (let i = 0; i < arr2.length; i++) {
+        arr2[i] = arr2[i].toLowerCase();
+        tray = arr2[i].split('');
+        tray[0] = tray[0].toUpperCase();
+        tray = tray.join('');
+        arr2[i] = tray;
+        if (arr2[i].length > max) {
+            max = arr2[i];
+            maxLength = max;
         }
     }
-    document.write('chữ có đô dài lớn nhất là : ' + max);
-    document.write(`<br>`);
-    document.write(array.join(' '));
+    arr2 = arr2.join(' ');
+    document.write(arr2 + '<br>' + ' kí tự dài nhất là ' + maxLength);
 </script>
 </body>
 </html>

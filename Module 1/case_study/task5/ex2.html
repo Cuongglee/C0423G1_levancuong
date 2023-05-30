@@ -2,31 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ex2</title>
+    <title>số nguyên tố đa chiều</title>
 </head>
 <body>
 <script>
+    function checkFrime(number) {
+        let count = 0;
+        for (let i = 1; i <= number; i++) {
+            if (number % i === 0) {
+                count++;
+            }
+        }
+        if (count === 2) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     let arr = [
         [1, 2, 3, 4, 5],
-        [6, 7, 8, 9, 10],
-    ]
-    let newArr = [];
+        [6, 7, 8, 9, 10, 11],
+    ];
+    let count = 0;
     for (let i = 0; i < arr.length; i++) {
         for (let j = 0; j < arr[i].length; j++) {
-            let count = 0;
-            if (num === 1) {
-                false;
-            } else {
-                for (let i = 1; i <= num; i++) {
-                    if (num % i === 0) {
-                        count++;
-                    }
-                    newArr.push(arr[i][j]);
-                }
+            if (checkFrime(arr[i][j])) {
+                document.write(arr[i][j] + 'là số nguyên tố' + `<br/>`);
+                count++;
             }
         }
     }
-        alert('số nguyên tố có trong mảng là:' + newArr.length)
+    document.write('số lượng số nguyên tố là:' + count);
 </script>
 </body>
 </html>

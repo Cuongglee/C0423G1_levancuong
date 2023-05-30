@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OOP</title>
+</head>
+<body>
+<h2>Danh sách học viên</h2>
+<button type="button" value="ok" name="thêm mới" onclick="addNewStudent()">thêm mới học viên</button>
+<button type="button" value="ok" name="sửa thông tin" onclick="editStudent()"> sửa thông tin học viên</button>
+<button type="button" value="ok" name="xóa thông tin" onclick="deleteStudent()">xóa thông tin học viên</button>
+<hr>
+<div id="tableStudent"></div>
+<script>
+    class Student {
+        constructor(id, name, mail, birth, module) {
+            this.id = id;
+            this.name = name;
+            this.mail = mail;
+            this.birth = birth;
+            this.module = module;
+        }
+    }
+
+    let student1 = new Student("HV-001", "lê văn thôi", "abc@gmail.com", "1/1/98", "module1");
+    let student2 = new Student("HV-002", "lê văn nhé", "cef@gmail.com", "2/2/99", "module1");
+    let student3 = new Student("HV-003", "lê văn bạn", "ghk@gmail.com", "3/3/20", "module1");
+    let studentList = [];
+    studentList.push(student1, student2, student3);
+    displayStudentList(studentList);
+
+    function displayStudentList(list) {
+        let tableStr = "<table border='1' style='border-collapse: collapse' width='500px' >";
+        tableStr += "<tr>";
+        tableStr += "<th> stt </th>";
+        tableStr += "<th> Mã học viên </th>";
+        tableStr += "<th> Tên </th>";
+        tableStr += "<th> Gmail </th>";
+        tableStr += "<th> Ngày sinh </th>";
+        tableStr += "<th> Module </th>";
+        "</tr>";
+
+        for (let i = 0; i < list.length; i++) {
+            tableStr += "<tr>";
+            tableStr += "<td>" + (i + 1) + "</td>";
+            tableStr += "<td>" + list[i].id + "</td>";
+            tableStr += "<td>" + list[i].name + "</td>";
+            tableStr += "<td>" + list[i].mail + "</td>";
+            tableStr += "<td>" + list[i].birth + "</td>";
+            tableStr += "<td>" + list[i].module + "</td>"
+            tableStr += "</tr>";
+        }
+        tableStr += "</table>";
+        document.getElementById('tableStudent').innerHTML = tableStr;
+    }
+
+    function addNewStudent() {
+        let a = prompt('nhập mã học viên');
+        let b = prompt('nhập tên học viên');
+        let c = prompt('nhập gmail học viên');
+        let d = prompt('nhập ngày sinh học viên');
+        let e = prompt('nhập module của học viên');
+        let newStudent = new Student(a, b, c, d, e);
+        studentList.push(newStudent);
+        displayStudentList(studentList);
+    }
+
+    function deleteStudent() {
+        let a = prompt('nhập vào mã học viên muốn xóa');
+        let flag = false;
+        for (let i = 0; i < studentList.length; i++) {
+            if (a === studentList[i].id) {
+                if (confirm('bạn có muốn xóa không')) {
+                    studentList.splice(i, 1);
+                    flag = true;
+                }
+            }
+        }
+        if (flag === false) {
+            alert('không tồn tại, mời bạn nhập lại');
+        }
+        displayStudentList(studentList);
+    }
+
+    function editStudent() {
+        let a = prompt('nhập mã học viên cần sửa');
+        let flag = false;
+        for (let i = 0; i < studentList.length; i++) {
+            if (a === studentList[i].id) {
+                studentList[i].id = prompt('nhập id mới');
+                studentList[i].name = prompt('nhập tên mới');
+                studentList[i].mail = prompt('nhập mail mới');
+                studentList[i].birth = prompt('nhập ngày sinh mới');
+                studentList[i].module = prompt('nhập module mới');
+                flag === true
+            }
+        }
+        if (flag === false) {
+            alert('mã sinh viên không tồn tại');
+        }
+        displayStudentList(studentList);
+    }
+</script>
+</body>
+
+</html>
